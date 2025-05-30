@@ -1,0 +1,31 @@
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 26vmax;
+  height: 26vmax;
+  background-color: rgb(6, 157, 81);
+  border-radius: 1.2vmax;
+  padding: 1.2vmax;
+  gap: 0.5vmax;
+
+  .cell {
+    aspect-ratio: 1;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    border-radius: 0.7vmax;
+    font-size: 1.5vmax;
+    color: #222;
+    user-select: none;
+    text-align: center;
+
+    &.isNumber {
+      background-color: rgb(149, 227, 70);
+    }
+
+    &.isNull {
+      background-color: rgb(103, 168, 39);
+    }
+  }
+}
